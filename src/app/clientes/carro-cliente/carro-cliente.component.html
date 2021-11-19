@@ -1,0 +1,99 @@
+<form class="form-horizontal" novalidate [formGroup]="formularioveiculo" >
+
+  <div class="class row" class="bg-success">
+    <div class="class col-12" class="text-center">
+      <h6> Cadastro dos Veiculos </h6>
+    </div>
+  </div>
+
+  <div class="container">
+
+
+    <div class="form-group row">
+
+      <div class="col-md-2">
+        <label for="placa" class="control-label">Placa</label>
+        <input
+            type="text"
+            class="form-control"
+            id="placa"
+            formControlName="placa"
+            placeholder="placa"
+        >
+
+      </div>
+
+      <div class="col-md-4">
+        <label for="modelo" class="control-label">Modelo</label>
+        <input
+            type="text"
+            class="form-control"
+            id="modelo"
+            formControlName="modelo"
+        >
+      </div>
+
+    </div>
+
+      <div class="col-md-6">
+
+        <div class="card-body">
+          <table
+            class="table table-hover"
+            *ngIf="carros$ | async as carros; else loading"
+          >
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Carros</th>
+                <th>O que fazer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let carro of carros">
+                <th>{{ carro.id }}</th>
+                <th>{{ carro.placa }}</th>
+                <th>{{ carro.modelo }}</th>
+
+                <td>
+                  <span class="float-right">
+                    <button
+                      class="btn btn-outline-warning mb-1 btn-sm"
+                    >
+                      Atuallizar
+                    </button>
+                    {{ " " }}
+                    <button
+                      class="btn btn-outline-danger mb-1 btn-sm"
+                      (click)="onDelete(carro)"
+                    >
+                      Remover
+                    </button>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <ng-template #loading>
+            <span> Carregando Carros ...</span>
+          </ng-template>
+
+        </div>
+
+
+      </div>
+
+
+    <div class="form-group row">
+      <div class="col-md-6">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Salvar</button>
+        <button class="btn btn-default" >Cancelar</button>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</form>

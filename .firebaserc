@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "curso-loiane-queops": {
+      "hosting": {
+        "request-http": [
+          "curso-loiane-queops"
+        ]
+      }
+    }
+  }
+}

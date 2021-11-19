@@ -1,0 +1,166 @@
+{
+  "cursos": [
+    {
+      "id": 6,
+      "name": "Dot Net "
+    },
+    {
+      "id": 7,
+      "name": "Angular"
+    },
+    {
+      "id": 8,
+      "name": "Net ..."
+    },
+    {
+      "id": 9,
+      "name": "dandara sindrome hara"
+    },
+    {
+      "id": 10,
+      "name": "Lua"
+    },
+    {
+      "id": 11,
+      "name": "mente humana"
+    },
+    {
+      "id": 12,
+      "name": "fluxo"
+    }
+  ],
+  "carros": [
+    {
+      "id": 12,
+      "placa": "QPS-0001",
+      "modelo": "saindo do burco"
+    },
+    {
+      "id": 13,
+      "placa": "GOP1045",
+      "modelo": "FIAT STRADA"
+    },
+    {
+      "id": 14,
+      "placa": "KEG",
+      "modelo": "OMEGA SUPREMA"
+    },
+    {
+      "id": 15,
+      "placa": "JOG+1020",
+      "modelo": "KIA"
+    },
+    {
+      "id": 16,
+      "placa": "GSS-4578",
+      "modelo": "FUSCA"
+    },
+    {
+      "id": 17,
+      "idcliente": null,
+      "placa": "GSS-4578",
+      "modelo": "FUSCA"
+    },
+    {
+      "id": 18,
+      "idcliente": "2",
+      "placa": "GSS-4578",
+      "modelo": "TESTE"
+    },
+    {
+      "id": 19,
+      "idcliente": "3",
+      "placa": "MDP-7845",
+      "modelo": "CORSA"
+    },
+    {
+      "id": 20,
+      "idcliente": "2",
+      "placa": "KEG-4758",
+      "modelo": "KOMBI"
+    },
+    {
+      "id": 21,
+      "idcliente": "5",
+      "placa": "WDP-1010",
+      "modelo": "FUSCA"
+    },
+    {
+      "id": 22,
+      "idcliente": "5",
+      "placa": null,
+      "modelo": null
+    },
+    {
+      "id": 23,
+      "idcliente": "4",
+      "placa": "GGG-1010",
+      "modelo": "COROLA"
+    },
+    {
+      "id": 24,
+      "idcliente": "4",
+      "placa": "LEX-0101",
+      "modelo": "FIESTA"
+    },
+    {
+      "id": 25,
+      "idcliente": "4",
+      "placa": "LEX-0002",
+      "modelo": "CARRAO"
+    }
+  ],
+  "clientes": [
+    {
+      "id": 2,
+      "nome": "Queops Vitoria Gomes da Silvas",
+      "email": "queops@gmail.com",
+      "cpf": "86412337687",
+      "telefone": "31920009233",
+      "telefoneA": "31920009233",
+      "endereco": {
+        "cep": "30620470",
+        "numero": "1520",
+        "complemento": "de 2600/2601 ao fim",
+        "rua": "Rua Doutor Cristiano Rezende",
+        "bairro": "Flávio Marques Lisboa (Barreiro)",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      }
+    },
+    {
+      "id": 3,
+      "nome": "Simone da silva neto",
+      "email": "simone@gmail.com",
+      "cpf": "86412337687",
+      "telefone": "31920009233",
+      "telefoneA": "31920009233",
+      "endereco": {
+        "cep": "36200656",
+        "numero": "12",
+        "complemento": "",
+        "rua": "Rua Sabino José Ferreira",
+        "bairro": "Carmo",
+        "cidade": "Barbacena",
+        "estado": "MG"
+      }
+    },
+    {
+      "id": 4,
+      "nome": "Lucilene dos Santos Gomes",
+      "email": "lexninha@hotmail.com",
+      "cpf": "79032303600",
+      "telefone": "31920009233",
+      "telefoneA": "31920009233",
+      "endereco": {
+        "cep": "30620470",
+        "numero": "10",
+        "complemento": "de 2600/2601 ao fim",
+        "rua": "Rua Doutor Cristiano Rezende",
+        "bairro": "Flávio Marques Lisboa (Barreiro)",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      }
+    }
+  ]
+}

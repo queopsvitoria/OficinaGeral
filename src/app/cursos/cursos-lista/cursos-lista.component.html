@@ -1,0 +1,68 @@
+<div class="card">
+  <div class="card-header">
+    <div class="float-left">
+      <h4>Cursos</h4>
+    </div>
+    <div class="float-right">
+      <button type="button" class="btn btn-primary" [routerLink]="['novo']">
+        Novo Curso
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="onRefresh()">
+        Atualizar
+      </button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <table
+      class="table table-hover"
+      *ngIf="cursos$ | async as cursos; else loading"
+    >
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Cursos</th>
+          <th>O que fazer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let curso of cursos">
+          <th>{{ curso.id }}</th>
+          <th>{{ curso.name }}</th>
+          <td>
+            <span class="float-right">
+              <button
+                class="btn btn-outline-warning mb-1 btn-sm"
+                (click)="onEdit(curso.id)"
+              >
+                Atuallizar
+              </button>
+              {{ " " }}
+              <button
+                class="btn btn-outline-danger mb-1 btn-sm"
+                (click)="onDelete(curso)"
+              >
+                Remover
+              </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ng-template #loading>
+      <span> Carregando Cursos ...</span>
+    </ng-template>
+
+
+  </div>
+</div>
+
+<ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <p>Tem Certeza que deseja remover esse curso?</p>
+    <button type="button" class="btn btn-default"(click)="onConfirmeDelete()">Sim</button>
+    <button type="button" class="btn btn-primary"(click)="onDeclineDelete()">Nao</button>
+  </div>
+</ng-template>
+

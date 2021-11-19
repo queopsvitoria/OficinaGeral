@@ -1,0 +1,66 @@
+<div class="card">
+  <div class="card-header">
+    <div class="float-left">
+      <h4>Clientes</h4>
+    </div>
+    <div class="float-right">
+      <button type="button" class="btn btn-primary" [routerLink]="['novo']">
+        Novo Cliente
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="onRefresh()">
+        Atualizar
+      </button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <table
+      class="table table-hover"
+      *ngIf="clientes$ | async as clientes; else loading"
+    >
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Clientes</th>
+          <th>O que fazer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <th>{{ cliente.id }}</th>
+          <th>{{ cliente.nome }}</th>
+          <td>
+            <span class="float-right">
+              <button
+                class="btn btn-outline-warning mb-1 btn-sm"
+                (click)="onEdit(cliente.id)"
+              >
+                Atuallizar
+              </button>
+              {{ " " }}
+              <button
+                class="btn btn-outline-danger mb-1 btn-sm"
+                (click)="onDelete(cliente)"
+              >
+                Remover
+              </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ng-template #loading>
+      <span> Carregando Clientes ...</span>
+    </ng-template>
+
+  </div>
+
+<ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <p>Tem Certeza que deseja remover esse Cliente?</p>
+    <button type="button" class="btn btn-default"(click)="onConfirmeDelete()">Sim</button>
+    <button type="button" class="btn btn-primary"(click)="onDeclineDelete()">Nao</button>
+  </div>
+</ng-template>
+

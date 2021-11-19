@@ -1,0 +1,29 @@
+http://localhost:3000/cursos
+
+###
+http://localhost:3000/cursos/2
+
+###
+POST http://localhost:3000/cursos HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Ruby"
+}
+
+
+###
+PUT http://localhost:3000/cursos/1 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Delphi"
+}
+
+###
+DELETE http://localhost:3000/cursos/1 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Angular alterado"
+}
