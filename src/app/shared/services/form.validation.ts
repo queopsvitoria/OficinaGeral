@@ -28,6 +28,7 @@ export class FormValidations {
 
   static cepValidator(control: FormControl) {
     const cep = control.value;
+    console.log(cep);
     if (cep && cep !== '') {
        const validacep = /^[0-9]{8}$/;
        return validacep.test(cep) ? null : { cepInvalido: true};
@@ -36,7 +37,19 @@ export class FormValidations {
     return null;
   }
 
+  static placaValidator(control: FormControl) {
+    const placa = control.value;
+    console.log(placa);
 
+    if (placa && placa !== '') {
+       const validaplaca = /^[a-zA-Z0-9]{7}$/; //a-zA-Z0-9
+       return validaplaca.test(placa) ? null : { placaInvalido: true};
+    }
+
+    return null;
+  }
+
+  
   static equalsTo(otherField:string) {
     const validator = (formControl: FormControl) => {
       if (otherField == null) {

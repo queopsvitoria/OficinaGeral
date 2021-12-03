@@ -11,6 +11,8 @@
 
     <div class="form-group row">
 
+      <!--label-- class="control-label">{{ recebeFiltro }}</!--label-->
+
       <div class="col-md-2">
         <label for="placa" class="control-label">Placa</label>
         <input
@@ -35,7 +37,15 @@
 
     </div>
 
+    <div class="form-group row">
       <div class="col-md-6">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Salvar</button>
+        <button class="btn btn-default" >Cancelar</button>
+
+      </div>
+    </div>
+
+      <div class="col-md-12">
 
         <div class="card-body">
           <table
@@ -44,33 +54,45 @@
           >
             <thead>
               <tr>
-                <th>#</th>
-                <th>Carros</th>
-                <th>O que fazer</th>
+                  <th>#</th>
+                  <th>Placa</th>
+                  <th>Carros</th>
+                  <th>O que fazer</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let carro of carros">
-                <th>{{ carro.id }}</th>
-                <th>{{ carro.placa }}</th>
-                <th>{{ carro.modelo }}</th>
+              <tr *ngFor="let carro of carros ">
+                <ng-container *ngIf="carro.idcliente == recebeFiltro">
+                  <th>{{ carro.id }} </th>
+                  <th>{{ carro.placa }} </th>
 
-                <td>
-                  <span class="float-right">
-                    <button
-                      class="btn btn-outline-warning mb-1 btn-sm"
-                    >
-                      Atuallizar
-                    </button>
-                    {{ " " }}
-                    <button
-                      class="btn btn-outline-danger mb-1 btn-sm"
-                      (click)="onDelete(carro)"
-                    >
-                      Remover
-                    </button>
-                  </span>
-                </td>
+                  <th>{{ carro.modelo }} </th>
+                  <td>
+                      <span class="float-right">
+                        <button
+                          class="btn btn-outline-warning mb-1 btn-sm"
+                        >
+                          Atuallizar
+                        </button>
+                        {{ " " }}
+                        <button
+                          class="btn btn-outline-danger mb-1 btn-sm"
+                          (click)="onDelete(carro)"
+                        >
+                          Remover
+                        </button>
+                        <button
+                          class="btn btn-outline-success mb-1 btn-sm"
+                          (click)="onDelete(carro)"
+                        >
+                          Criar Ordem Serviço
+                        </button>
+
+                      </span>
+                  </td>
+                </ng-container>
+
+
               </tr>
             </tbody>
           </table>
@@ -85,13 +107,7 @@
       </div>
 
 
-    <div class="form-group row">
-      <div class="col-md-6">
-        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Salvar</button>
-        <button class="btn btn-default" >Cancelar</button>
 
-      </div>
-    </div>
 
   </div>
 

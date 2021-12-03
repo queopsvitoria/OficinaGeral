@@ -67,12 +67,12 @@ export class CursosFormComponent implements OnInit {
     console.log("carga ",this.form.value);
     if (this.form.valid) {
       console.log('sumbit');
-      let mesgSucess = 'Curso Criado com Sucesso';
-      let mesgError = 'Erro ao Criar curso tente novamente';
+      let mesgSucess = 'Atendente Criado com Sucesso';
+      let mesgError = 'Erro ao Criar Atendente tente novamente';
 
       if (this.form.value.id) {
-        mesgSucess = 'Curso Atualizado com Sucesso';
-        mesgError = 'Erro ao atualizar curso tente novamente';
+        mesgSucess = 'Atendente Atualizado com Sucesso';
+        mesgError = 'Erro ao atualizar Atendente tente novamente';
 
       }
 
@@ -96,7 +96,5 @@ export class CursosFormComponent implements OnInit {
     this.submitted = false;
     this.form.reset();
     this.location.back()
-
-    //   console.log('Cancelar')
   }
 }

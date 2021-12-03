@@ -24,13 +24,19 @@ export class CrudService<T> {
     return this.http.post(this.API_URL, record).pipe(take(1));
   }
 
+
+  loadByplaca(placa: any) {
+    console.log('que porra e essa', placa)
+    return this.http.get<T>(`${this.API_URL}?placa=${placa}`).pipe(take(1));
+  }
+
   loadById(id: any) {
+    console.log("loadById ",(`${this.API_URL}/${id}`));
     return this.http.get<T>(`${this.API_URL}/${id}`).pipe(take(1));
   }
 
   save(record: any) {
     if (record['id']) {
-      console.log('update nao pode')
       return this.update(record);
     }
     return this.create(record);

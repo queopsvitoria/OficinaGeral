@@ -42,8 +42,6 @@ export class CarroClienteComponent implements OnInit {
 
   ngOnInit() {
 
-
-
     this.route.params.subscribe(
       (params: any) => {
         const id = params['id'];
@@ -168,6 +166,7 @@ onRefresh() {
   );
 
 }
+
 onDeclineDelete(){
   this.deleteModalRef.hide();
 }

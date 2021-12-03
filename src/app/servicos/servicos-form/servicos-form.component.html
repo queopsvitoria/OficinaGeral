@@ -1,0 +1,74 @@
+<form class="form-horizontal" novalidate [formGroup]="formulario">
+
+  <div class="class row" class="bg-success">
+    <div class="class col-12" class="text-center">
+      <h6> Cadastro dos Serviços </h6>
+    </div>
+  </div>
+
+  <div class="form-group row">
+
+    <div class="col-md-8" [ngClass]="aplicaCssErro('nome')">
+       <label for="nome" class="control-label">Servico</label>
+       <input
+          type="text"
+          class="form-control is-valid"
+          formControlName="nome"
+          id="nome"
+          placeholder="Nome"
+       >
+       <app-error-msg [control]="formulario.get('nome')" label="Nome">
+       </app-error-msg>
+
+    </div>
+
+    <div class="col-md-4" [ngClass]="aplicaCssErro('qtde')">
+      <label for="qtde" class="control-label">Quantidade</label>
+      <input
+          type="text"
+          class="form-control is-valid"
+          id="qtde"
+          formControlName="qtde"
+      >
+    </div>
+
+  </div>
+  <div class="form-group row">
+
+    <div class="col-md-4" [ngClass]="aplicaCssErro('valorcompra')">
+      <label for="valorcompra" class="control-label">Valor de Compra</label>
+      <input
+          type="text"
+          class="form-control is-valid"
+          id="valorcompra"
+          formControlName="valorcompra"
+      >
+    </div>
+
+    <div class="col-md-4" [ngClass]="aplicaCssErro('valorvenda')">
+      <label for="valorvenda" class="control-label">Valor de Venda</label>
+      <input
+          type="text"
+          class="form-control is-valid"
+          id="valorvenda"
+          formControlName="valorvenda"
+      >
+    </div>
+
+    <div class="col-md-4" [ngClass]="aplicaCssErro('tempomedio')">
+      <label for="tempomedio" class="control-label">Tempo Estimado</label>
+      <input
+          type="text"
+          class="form-control is-valid"
+          id="tempomedio"
+          formControlName="tempomedio"
+      >
+    </div>
+
+
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="onSubmit()">Salvar</button>
+  <button class="btn btn-default" (click)="onCancel()">Cancelar</button>
+
+</form>

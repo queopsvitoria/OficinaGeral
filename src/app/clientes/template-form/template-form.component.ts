@@ -18,6 +18,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AlertModalService } from './../../shared/alert-modal.service';
 import { Location } from '@angular/common';
 import { Input } from '@angular/core';
+
 @Component({
   selector: 'app-template-form',
   templateUrl: './template-form.component.html',
@@ -42,8 +43,6 @@ export class TemplateFormComponent extends BaseFormComponent implements OnInit {
               private route: ActivatedRoute,
               private modal: AlertModalService,
               private location: Location
-
-
               ) {
 
                 super()
@@ -124,16 +123,16 @@ export class TemplateFormComponent extends BaseFormComponent implements OnInit {
       )
       .subscribe(dados => dados ? this.populaDadosForm(dados) : {});
 
-        this.formulario.get('endereco.estado')?.valueChanges
-          .pipe(
+    this.formulario.get('endereco.estado')?.valueChanges
+      .pipe(
             tap(estado => console.log('NOVO Estado ', estado)),
             map(estado => this.estados.filter(e => e.sigla == estado)),
             map(estados => estados && estados.length > 0  ? estados[0].id : empty()),
             switchMap((estadoId: any) => this.dropdownService.getCidades(estadoId)),
             tap(console.log)
 
-          )
-          .subscribe(cidades => this.cidades = cidades);
+      )
+      .subscribe(cidades => this.cidades = cidades);
   }
 
 
@@ -200,6 +199,7 @@ export class TemplateFormComponent extends BaseFormComponent implements OnInit {
 
   }
 
+  /*
   consultaCep() {
 
     const cep =this.formulario.get('endereco.cep')?.value;
@@ -210,7 +210,7 @@ export class TemplateFormComponent extends BaseFormComponent implements OnInit {
 
     }
   }
-
+*/
   populaDadosForm(dados:any) {
 
         this.formulario.patchValue({
@@ -224,7 +224,7 @@ export class TemplateFormComponent extends BaseFormComponent implements OnInit {
           }
         });
 
-      }
+  }
 
   resetaDadosdoForumulario () {
     this.formulario.patchValue({

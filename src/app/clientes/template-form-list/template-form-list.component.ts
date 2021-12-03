@@ -81,7 +81,7 @@ export class TemplateFormListComponent implements OnInit {
         }
       );
   }
-
+  
   onConfirmeDelete() {
       this.service.remove(this.clientesSelecionado.id)
 

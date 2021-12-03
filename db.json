@@ -21,68 +21,33 @@
       "name": "Lua"
     },
     {
-      "id": 11,
-      "name": "mente humana"
-    },
-    {
       "id": 12,
       "name": "fluxo"
     }
   ],
   "carros": [
     {
-      "id": 12,
-      "placa": "QPS-0001",
-      "modelo": "saindo do burco"
-    },
-    {
-      "id": 13,
-      "placa": "GOP1045",
-      "modelo": "FIAT STRADA"
-    },
-    {
-      "id": 14,
-      "placa": "KEG",
-      "modelo": "OMEGA SUPREMA"
-    },
-    {
-      "id": 15,
-      "placa": "JOG+1020",
-      "modelo": "KIA"
-    },
-    {
-      "id": 16,
-      "placa": "GSS-4578",
-      "modelo": "FUSCA"
-    },
-    {
-      "id": 17,
-      "idcliente": null,
-      "placa": "GSS-4578",
-      "modelo": "FUSCA"
-    },
-    {
       "id": 18,
       "idcliente": "2",
-      "placa": "GSS-4578",
+      "placa": "GSS4578",
       "modelo": "TESTE"
     },
     {
       "id": 19,
       "idcliente": "3",
-      "placa": "MDP-7845",
+      "placa": "MDP7845",
       "modelo": "CORSA"
     },
     {
       "id": 20,
       "idcliente": "2",
-      "placa": "KEG-4758",
+      "placa": "KEG4758",
       "modelo": "KOMBI"
     },
     {
       "id": 21,
       "idcliente": "5",
-      "placa": "WDP-1010",
+      "placa": "WDP1010",
       "modelo": "FUSCA"
     },
     {
@@ -94,7 +59,7 @@
     {
       "id": 23,
       "idcliente": "4",
-      "placa": "GGG-1010",
+      "placa": "GGG1010",
       "modelo": "COROLA"
     },
     {
@@ -108,6 +73,54 @@
       "idcliente": "4",
       "placa": "LEX-0002",
       "modelo": "CARRAO"
+    },
+    {
+      "id": 26,
+      "idcliente": "2",
+      "placa": "XXX1234",
+      "modelo": "HILUX"
+    }
+  ],
+  "ordem": [
+    {
+      "id": 0,
+      "idplaca": "0",
+      "idcliente": "0",
+      "idatendente": "0",
+      "datacadastro": "0",
+      "horaentrada": "0",
+      "valorservico": "0",
+      "valordesconto": "0",
+      "valortotal": "0",
+      "qtde": "0",
+      "tempomedio": "00:30",
+      "tempogasto": "0"
+    }
+  ],
+  "servicos": [
+    {
+      "id": 1,
+      "nome": "LAMPADA H12",
+      "qtde": "0",
+      "valorcompra": "0",
+      "valorvenda": "1",
+      "tempomedio": "00:30"
+    },
+    {
+      "id": 2,
+      "nome": "Lampada H7",
+      "qtde": null,
+      "valorcompra": "1",
+      "valorvenda": "2",
+      "tempomedio": "3"
+    },
+    {
+      "id": 3,
+      "nome": "Fuzivel Vampirinho",
+      "qtde": "12",
+      "valorcompra": "10",
+      "valorvenda": "12",
+      "tempomedio": "00:30"
     }
   ],
   "clientes": [

@@ -1,18 +1,18 @@
 <form class="needs-validation" novalidate [formGroup]="form" style="padding: 15px;">
   <div class="form-row">
     <div class="col-sm-12">
-      <label for="name" class="form-label">Name do Curso</label>
+      <label for="name" class="form-label">Nome do Atendente</label>
       <input
         type="text"
         class="form-control is-valid"
         id="name"
-        placeholder="Name do Curso"
+        placeholder="Name do Atendente"
         formControlName="name"
         [ngClass]="{'is-invalid': submitted && hasError('name')}"
 
       />
       <div class="invalid-feedback" *ngIf="hasError('name')" >
-        Informe um name para o curso
+        Informe um name para o Atendente
       </div>
 
 

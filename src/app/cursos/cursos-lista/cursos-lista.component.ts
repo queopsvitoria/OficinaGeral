@@ -26,12 +26,14 @@ export class CursosListaComponent implements OnInit {
 
   cursoSelecionado!: Curso;
 
-  constructor( private service: Cursos2Service,
-                private alertService: AlertModalService,
+  constructor(
+              private service: Cursos2Service,
+              private alertService: AlertModalService,
 
-               private bsModalService: BsModalService,
-               private router: Router,
-               private route: ActivatedRoute) { }
+              private bsModalService: BsModalService,
+              private router: Router,
+              private route: ActivatedRoute
+              ) { }
 
   ngOnInit(): void {
  //   this.service.list().subscribe(dados => this.cursos = dados);
