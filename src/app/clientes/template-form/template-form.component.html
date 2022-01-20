@@ -4,6 +4,11 @@
     <mat-tab label="Dados Cadastrais do Cliente">
       <div class="container">
 
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label class="bosta">Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza">
+        </mat-form-field>
+
         <div class="class row" class="bg-success">
           <div class="class col-12" class="text-center">
             <h6> Cadastro dos Clientes </h6>
@@ -12,15 +17,10 @@
 
         <div class="form-group row">
 
+
           <div class="col-md-8" [ngClass]="aplicaCssErro('nome')">
             <label for="nome" class="control-label">Nome</label>
-            <input
-                type="text"
-                class="form-control is-valid"
-                formControlName="nome"
-                id="nome"
-                placeholder="Nome"
-            >
+            <input type="text" class="form-control is-valid" formControlName="nome" id="nome" placeholder="Nome">
             <app-error-msg [control]="formulario.get('nome')" label="Nome">
             </app-error-msg>
 
@@ -28,12 +28,7 @@
 
           <div class="col-md-4" [ngClass]="aplicaCssErro('cpf')">
             <label for="cpf" class="control-label">CPF</label>
-            <input
-                type="text"
-                class="form-control is-valid"
-                id="cpf"
-                formControlName="cpf"
-            >
+            <input type="text" class="form-control is-valid" id="cpf" formControlName="cpf">
           </div>
 
         </div>
@@ -165,6 +160,7 @@
       <div class="container">
           <app-carro-cliente [recebeFiltro]="mandafiltro"></app-carro-cliente>
         </div></mat-tab>
+
     <mat-tab label="Serviços ja Prestados"> </mat-tab>
     </mat-tab-group>
 

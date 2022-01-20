@@ -1,3 +1,4 @@
+import { InputFormExampleModule } from './input-form-example/input-form-example.module';
 import { OrdemModule } from './ordem/ordem.module';
 import { ServicosModule } from './servicos/servicos.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -14,7 +15,7 @@ import { TemplateFormModule } from './clientes/template.module';
 import { LoginComponent } from './login/login/login.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { CarroClienteFormModule } from './clientes/carro-cliente.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TemplateFormModule,
     ServicosModule,
     OrdemModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CarroClienteFormModule,
+    InputFormExampleModule
 
 
   ],

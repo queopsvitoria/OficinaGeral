@@ -1,11 +1,9 @@
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { ServicosModule } from './servicos/servicos.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'templateFormList' },
+  { path: '', pathMatch: 'full', redirectTo: 'busca-reativa' },//templateFormList
 
   {
     path: 'cursos',
@@ -30,7 +28,20 @@ const routes: Routes = [
   {
     path: 'ordemForm',
     loadChildren: () => import('./ordem/ordem.module').then(m => m.OrdemModule)
+  },
+  {
+    path: 'carroClienteForm',
+    loadChildren: () => import('./clientes/carro-cliente.module').then(m => m.CarroClienteFormModule)
+  },
+  {
+    path: 'busca-reativa',
+    loadChildren: () => import('./reactive-search/reactive-search.module').then(m => m.ReactiveSearchModule)
+  },
+  {
+    path: 'input-material',
+    loadChildren: () => import('./input-form-example/input-form-example.module').then(m => m.InputFormExampleModule)
   }
+
 
 ];
 

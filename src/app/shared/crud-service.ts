@@ -26,8 +26,13 @@ export class CrudService<T> {
 
 
   loadByplaca(placa: any) {
-    console.log('que porra e essa', placa)
+    console.log('que porra e essa', placa+(`${this.API_URL}?placa=${placa}`))
     return this.http.get<T>(`${this.API_URL}?placa=${placa}`).pipe(take(1));
+  }
+
+  loadByNomeServico(nome: any) {
+    console.log('que porra e essa', nome+(`${this.API_URL}?nome_like=${nome}`))
+    return this.http.get<T>(`${this.API_URL}?nome_like=${nome}`).pipe(take(1));
   }
 
   loadById(id: any) {

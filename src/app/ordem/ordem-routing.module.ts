@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { OrdemFormComponent } from './ordem-form/ordem-form.component';
+import { OrdemModelComponent } from './ordem-form/ordem-modelo.component';
 
 const routes: Routes = [
-  { path: '', component: OrdemFormComponent },
+  { path: '', component: OrdemModelComponent },
   {
     path: 'novo',
-    component: OrdemFormComponent,
+    component: OrdemModelComponent, //OrdemFormComponent
  //   resolve: {
  //     curso: CursoResolverGuard,
  //   },

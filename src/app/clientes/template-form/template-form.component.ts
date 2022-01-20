@@ -18,6 +18,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AlertModalService } from './../../shared/alert-modal.service';
 import { Location } from '@angular/common';
 import { Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-template-form',
@@ -42,7 +43,8 @@ export class TemplateFormComponent extends BaseFormComponent implements OnInit {
               private service: Clientes2Service,
               private route: ActivatedRoute,
               private modal: AlertModalService,
-              private location: Location
+              private location: Location,
+              private router: Router
               ) {
 
                 super()
@@ -240,7 +242,8 @@ export class TemplateFormComponent extends BaseFormComponent implements OnInit {
   }
 
   onCancel() {
-    this.location.back()
+   this.location.back();
+   // this.router.navigate(['/templateForm']); //carroClienteForm
   }
 
 }

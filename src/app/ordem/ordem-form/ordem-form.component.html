@@ -1,23 +1,8 @@
-<body>
 
 <form class="needs-validation" novalidate [formGroup]="formulario" style="padding: 15px;">
 
-  <div class="class row" class="bg-success">
-    <div class="class col-12" class="text-center">
-      <h6> Movimentação da Ordem de Serviço </h6>
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-8"></div>
-      <div class="col-4" style="text-align: right;">
-        <h2>
-           000001
-        </h2>
-      </div>
-    </div>
-  </div>
+
   <form class="container">
 
 
@@ -25,100 +10,91 @@
 
       <!--label-- class="control-label">{{ recebeFiltro }}</!--label-->
 
-      <div class="col-md-2">
-        <label for="placa" class="control-label">Placa</label>
-        <input
-            type="text"
-            class="form-control"
-            id="placa"
-            formControlName="placa"
-        >
-
-      </div>
-
-      <div class="col-md-8">
-        <label for="modelo" class="control-label">Modelo</label>
-        <input
-            readonly="true"
-            type="text"
-            class="form-control"
-            id="modelo"
-            formControlName="modelo"
-        >
-      </div>
-
     </div>
 
-    <div class="form-group row">
-      <div class="class row" class="bg-info">
-        <div class="class col-12" class="text-center">
-          <h6> {{ idclientesaida }} </h6>
+    <div class="form-group row card">
+
+      <div class="row align-items-start">
+        <div class="col  label-float">
+          <input
+           type="number"
+           style="padding: 15px 0px"
+           placeholder=" "
+           id="quantidade"
+           formControlName="quantidade"
+          >
+          <label>Qtde</label>
         </div>
-      </div>
 
-    </div>
-
-    <div class="form-group row">
-      <div class="col-md-2">
-        <label for="qtde" class="control-label">Qtde</label>
-        <input
-            type="number"
-            class="form-control"
-            id="qtde"
-            formControlName="qtde"
-        >
-      </div>
-      <div class="col-md-2">
-        <label for="codigo" class="control-label">codigo</label>
-        <input
+        <!--div class="col  label-float ">
+          <input
             type="text"
-            class="form-control"
+            style="padding: 15px 2px"
+            placeholder=" "
             id="codigo"
             formControlName="codigo"
-        >
-      </div>
-      <div class="col-md-4">
-        <label for="descricao" class="control-label">Descricao</label>
-        <input
-            type="text"
-            class="form-control"
-            id="descricao"
-            formControlName="descricao"
-        >
-      </div>
+          >
+          <label>Codigo</label>
 
-      <div class="col-md-2">
-        <label for="vrunitario" class="control-label">Vr. Unitário</label>
-        <input
+        </div-->
+        <div class="col label-float">
+          <input
+            list="result1"
+            style="padding: 15px 80px"
+            id="descricaoservico"
+            name="descricaoservico"
+            placeholder="Digite o Serviço..."
+            formControlName="descricaoservico"
+          >
+          <label>Descrição Serviços</label>
+
+        <datalist id="result1">
+          <!--ption *ngFor="let result of results1$ | async">
+                        {{ result.nome }}
+
+                      </option-->
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+        </div>
+
+        <div class="col label-float">
+          <input
+            style="padding: 15px 10px"
             id="vrunitario"
             formControlName="vrunitario"
-
             type="number"
-            class="form-control"
             name="vrunitario"
             ng-model="vrunitario"
             ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
             step="0.01"
             required
-        >
+          >
+          <label>Vr. Unitário</label>
+
+        </div>
+
+        <div class="col label-float">
+          <input
+              style="padding: 15px 10px"
+
+              id="vrtotal"
+              formControlName="vrtotal"
+
+              type="number"
+              name="vrtotal"
+              ng-model="vrtotal"
+              ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+              step="0.01"
+              required
+          >
+          <label>Vr. Total</label>
+        </div>
+
       </div>
 
-      <div class="col-md-2">
-        <label for="vrtotal" class="control-label">Vr. Total</label>
-        <input
-            readonly="true"
-            class="form-control"
-            id="vrtotal"
-            formControlName="vrtotal"
-
-            type="number"
-            name="vrtotal"
-            ng-model="vrtotal"
-            ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
-            step="0.01"
-            required
-        >
-      </div>
     </div>
 
 
@@ -133,4 +109,3 @@
   </form>
 
 </form>
-</body>

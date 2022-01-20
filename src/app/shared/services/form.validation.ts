@@ -49,7 +49,18 @@ export class FormValidations {
     return null;
   }
 
-  
+  static servicosValidator(control: FormControl) {
+    const nome = control.value;
+    console.log(nome);
+
+    if (nome && nome !== '') {
+       const validanome = /^[a-zA-Z0-9]{7}$/; //a-zA-Z0-9
+       return validanome.test(nome) ? null : { nomeInvalido: true};
+    }
+
+    return null;
+  }
+
   static equalsTo(otherField:string) {
     const validator = (formControl: FormControl) => {
       if (otherField == null) {

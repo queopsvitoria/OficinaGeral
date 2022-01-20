@@ -6,13 +6,18 @@ import {  ReactiveFormsModule } from '@angular/forms';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { TemplateFormListComponent } from './template-form-list/template-form-list.component';
 import { TemplateFormRoutes } from './template-form.routing';
-import { CarroClienteComponent } from './carro-cliente/carro-cliente.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MaterialModelModule } from '../material-model/material-model.module';
+import { MatInputModule } from '@angular/material/input';
+
+import { CarroClienteComponent } from './carro-cliente/carro-cliente.component';
 @NgModule({
   declarations: [
      TemplateFormComponent,
-     TemplateFormListComponent,
-     CarroClienteComponent
+     CarroClienteComponent,
+     TemplateFormListComponent
+
+
     ],
   imports: [
     CommonModule,
@@ -20,7 +25,10 @@ import { MatTabsModule } from '@angular/material/tabs';
     SharedModule,
     ReactiveFormsModule,
     TemplateFormRoutes,
-    MatTabsModule
+    MatTabsModule,
+    MatInputModule
+
+
   ]
 })
 export class TemplateFormModule { }

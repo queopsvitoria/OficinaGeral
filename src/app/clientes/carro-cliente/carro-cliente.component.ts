@@ -10,7 +10,7 @@ import {  Observable  } from 'rxjs';
 import { take, catchError, switchMap } from 'rxjs/operators'
 import { EMPTY, Subject } from 'rxjs';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-
+import { TemplateFormComponent } from '../template-form/template-form.component';
 @Component({
   selector: 'app-carro-cliente',
   templateUrl: './carro-cliente.component.html',
@@ -21,6 +21,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 export class CarroClienteComponent implements OnInit {
   submitted: boolean = false;
   formularioveiculo!: FormGroup;
+
   @Input() recebeFiltro: any;
 
   carros$!:Observable<Carros[]> ;
@@ -59,6 +60,7 @@ export class CarroClienteComponent implements OnInit {
       idcliente: [this.recebeFiltro],
       placa: [null],
       modelo: [null]
+      
     })
     this.onRefresh();
 
@@ -91,8 +93,6 @@ export class CarroClienteComponent implements OnInit {
         mesgError = 'Erro ao atualizar Veiculo tente novamente';
 
       }
-
-      console.log('chegando la');
 
       this.service.save(this.formularioveiculo.value).subscribe(
         sucess => {

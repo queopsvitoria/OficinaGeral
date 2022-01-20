@@ -48,6 +48,13 @@
 p {
 font-family: Lato;
 }
+
+::ng-deep  .bosta {
+  min-width: 25px !important;
+  padding: 5px;
+  color: black;
+}
+
 /*
 ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
   color:red;
